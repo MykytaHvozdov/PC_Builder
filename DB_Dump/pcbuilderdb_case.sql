@@ -31,7 +31,7 @@ CREATE TABLE `case` (
   `Max_CPU_Cooler_Height` decimal(5,2) DEFAULT NULL,
   `Price` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`Case_ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,6 +40,7 @@ CREATE TABLE `case` (
 
 LOCK TABLES `case` WRITE;
 /*!40000 ALTER TABLE `case` DISABLE KEYS */;
+INSERT INTO `case` VALUES (1,'Cooler Master','MasterBox Q300L','Micro ATX',360.00,155.00,49.99),(2,'Thermaltake','V200','ATX Mid Tower',370.00,160.00,59.99),(3,'Corsair','Carbide 175R','ATX Mid Tower',400.00,160.00,69.99);
 /*!40000 ALTER TABLE `case` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -52,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-11-30  0:14:19
+-- Dump completed on 2024-11-30  1:51:26

@@ -8,10 +8,6 @@ import { Router } from '@angular/router';
 export class NavigationService {
   constructor(private router: Router) {}
 
-  goToHomePage(): void {
-    this.router.navigate(['/builder']);
-  }
-
   goToLoginPage(): void {
     this.router.navigate(['/auth']);
   }

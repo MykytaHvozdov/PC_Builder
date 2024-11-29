@@ -1,8 +1,7 @@
-from django.shortcuts import render
-from django.contrib.auth import authenticate
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
+from django.contrib.auth import authenticate
 from rest_framework.authtoken.models import Token
 from .serializers import RegisterSerializer, LoginSerializer
 from django.utils import timezone
@@ -26,7 +25,7 @@ class LoginView(APIView):
             if user:
                 user.last_login = timezone.now()
                 user.save()
-                
+
                 token, created = Token.objects.get_or_create(user=user)
                 return Response({"token": token.key}, status=status.HTTP_200_OK)
             return Response({"error": "Invalid credentials"}, status=status.HTTP_401_UNAUTHORIZED)
